@@ -2,11 +2,20 @@ import {useState, useEffect} from 'react';
 
 import { Card, FormField, Loader } from '../components';
 
+function RenderCards({ data, title }) {
+    if(data?.length > 0) {
+        return data.map((post) => <Card key={post._id} {...post}/>)
+    }
+    return (
+        <h2>{title}</h2>
+    )
+}
+
 function Home() {
     const [loading, setLoading] = useState(false);
     const [ allPosts, setAllPosts] = useState(null);
 
-    const [searchText, setSearchText] = useState('test');
+    const [searchText, setSearchText] = useState('');
 
     return (
         <section>
@@ -31,6 +40,20 @@ function Home() {
                     )}
                     </>
                 )}
+
+                <div>
+                    {searchText ? (
+                        <RenderCards
+                            data={[]}
+                            title="There is nothing to find..."
+                        />
+                    ) : (
+                        <RenderCards 
+                            data={[]}
+                            title="Dall-F is taking a coffee break ☕..."
+                        />
+                    )} 
+                </div>
             </div>
         </section>
     )
