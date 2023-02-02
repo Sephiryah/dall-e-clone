@@ -11,6 +11,7 @@ const App = () => {
         <Link to="/">
           <img src={logo} alt="Dall-F logo"/>
         </Link>
+        <Link to="/create-post">Create</Link>
       </header>
     </BrowserRouter>
   )
