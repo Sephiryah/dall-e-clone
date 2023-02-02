@@ -13,6 +13,11 @@ const App = () => {
         </Link>
         <Link to="/create-post">Create</Link>
       </header>
+      <main>
+        <Routes>
+          <Route path="/"/>
+        </Routes>
+      </main>
     </BrowserRouter>
   )
 }
