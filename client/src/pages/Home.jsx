@@ -7,7 +7,7 @@ function RenderCards({ data, title }) {
         return data.map((post) => <Card key={post._id} {...post}/>)
     }
     return (
-        <h2>{title}</h2>
+        <h2 className="italic pt-4">{title}</h2>
     )
 }
 
@@ -15,16 +15,16 @@ function Home() {
     const [loading, setLoading] = useState(false);
     const [ allPosts, setAllPosts] = useState(null);
 
-    const [searchText, setSearchText] = useState('');
+    const [searchText, setSearchText] = useState('abc');
 
     return (
-        <section>
-            <div>
-                <h1 className="font-bold text-[24px]">Creation of Dall-F</h1>
+        <section className="bg-[#afb2b4] mx-3 pb-10 px-3  sm:px-6 md:mx-6 lg:mx-16 rounded-2xl">
+            <div className="pt-6 pb-3">
+                <h1 className="font-bold text-[24px] pb-3">Creation of Dall-F</h1>
                 <p>See what DALL-F can do while browsing examples image that this AI generated.</p>
             </div>
 
-            <div>
+            <div className="pb-3">
                 <FormField/>
             </div>
 
@@ -45,12 +45,12 @@ function Home() {
                     {searchText ? (
                         <RenderCards
                             data={[]}
-                            title="There is nothing to find..."
+                            title="No result found. Dall-F is lazy today..."
                         />
                     ) : (
                         <RenderCards 
                             data={[]}
-                            title="Dall-F is taking a coffee break ☕..."
+                            title="No post found. Dall-F is taking a coffee break ☕..."
                         />
                     )} 
                 </div>
