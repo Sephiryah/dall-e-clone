@@ -9,7 +9,12 @@ function Home() {
     return (
         <section>
             <div>
-                <h1>Creation of Dall-F</h1>
+                <h1 className="font-bold text-[24px]">Creation of Dall-F</h1>
+                <p>See what DALL-F can do while browsing examples image that this AI generated.</p>
+            </div>
+
+            <div>
+                <FormField/>
             </div>
         </section>
     )
