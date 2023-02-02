@@ -15,7 +15,7 @@ const App = () => {
       </header>
       <main>
         <Routes>
-          <Route path="/"/>
+          <Route path="/" element="<Home/>/>
         </Routes>
       </main>
     </BrowserRouter>
