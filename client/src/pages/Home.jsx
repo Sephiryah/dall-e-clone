@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import { Card, FormField, Loader } from '../components';
 
 function Home() {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [ allPosts, setAllPosts] = useState(null);
 
     return (
@@ -15,6 +15,17 @@ function Home() {
 
             <div>
                 <FormField/>
+            </div>
+
+            <div className="w-[50px]">
+                {loading ? (
+                    <div>
+                        <Loader />
+                    </div>
+                ) : (
+                    <>
+                    </>
+                )}
             </div>
         </section>
     )
