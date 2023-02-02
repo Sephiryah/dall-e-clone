@@ -4,8 +4,15 @@ import { logo } from './assets';
 import { Home, CreatePost } from './pages'
 
 const App = () => {
+
   return (
-    <h1 className="font-bold">Hello World! I'm Dall-E!</h1>
+    <BrowserRouter>
+      <header>
+        <Link to="/">
+          <img src={logo} alt="Dall-F logo"/>
+        </Link>
+      </header>
+    </BrowserRouter>
   )
 }
 
