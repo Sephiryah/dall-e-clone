@@ -15,12 +15,47 @@ function CreatePost() {
     const [generatingImg, setGeneratingImg] = useState(false);
     const [loading, setLoading] = useState(false);
 
+    const handleSubmit = () => {
+
+    }
+
+    const handleChange = (e) => {
+
+    }
+
+    const handleSurpriseMe = () => {
+
+    }
+    
     return (
         <section>
             <div>
                 <h1>Create</h1>
                 <p>Say something to Dall-F, and he will drawing what you just said. It could be anything, so give it a try !</p>
             </div>
+
+            <form action={handleSubmit}>
+                <div>
+                    <FormField
+                        labelName="Your name"
+                        type="text"
+                        name="name"
+                        placeholder="John Doe"
+                        value={form.name}
+                        handleChange={handleChange}
+                    />
+                    <FormField
+                        labelName="Prompt"
+                        type="text"
+                        name="prompt"
+                        placeholder=""
+                        value={form.prompt}
+                        handleChange={handleChange}
+                        isSurpriseMe
+                        handleSurpriseMe={handleSurpriseMe}
+                    />
+                </div>
+            </form>
         </section>
     )
 }
