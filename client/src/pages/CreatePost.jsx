@@ -67,6 +67,12 @@ function CreatePost() {
                                 alt="preview"
                             />
                         )}
+
+                        {generatingImg && (
+                            <div>
+                                <Loader/>
+                            </div>
+                        )}
                     </div>
                 </div>
             </form>
