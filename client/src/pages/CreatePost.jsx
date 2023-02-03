@@ -24,7 +24,7 @@ function CreatePost() {
     }
 
     const handleChange = (e) => {
-
+        
     }
 
     const handleSurpriseMe = () => {
@@ -86,6 +86,15 @@ function CreatePost() {
                         onClick={generateImage}
                     >
                         {generatingImg ? 'Generating...' : 'Generate'}
+                    </button>
+                </div>
+
+                <div>
+                    <p>Don't hesitate to share the Dall-F creation with the community !</p>
+                    <button
+                        type="submit"
+                    >
+                        {loading ? "Sharing..." : "Share with the community"}
                     </button>
                 </div>
             </form>
