@@ -14,9 +14,14 @@ function CreatePost() {
     });
     const [generatingImg, setGeneratingImg] = useState(false);
     const [loading, setLoading] = useState(false);
-    
+
     return (
-        <div>CreatePost</div>
+        <section>
+            <div>
+                <h1>Create</h1>
+                <p>Say something to Dall-F, and he will drawing what you just said. It could be anything, so give it a try !</p>
+            </div>
+        </section>
     )
 }
 
