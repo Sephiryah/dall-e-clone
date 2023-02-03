@@ -1,6 +1,31 @@
-function FormField() {
+function FormField({ labelName, type, name, placeholder, value, handleChange, isSurpriseMe, handleSurpriseMe }) {
     return(
-        <div>FormField</div>
+        <div>
+            <div>
+                <label
+                    htmlFor={name}
+                >
+                    {labelName}
+                </label>
+                {isSurpriseMe && (
+                    <button
+                        type="button"
+                        onClick={handleSurpriseMe}
+                    >
+                        Surprise me!
+                    </button>
+                )}
+            </div>
+            <input 
+                type={type}
+                id={name}
+                name={name}
+                placeholder={placeholder}
+                value={value}
+                onChange={handleChange}
+                required
+            />
+        </div>
     )
 }
 
