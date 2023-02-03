@@ -18,13 +18,13 @@ function Home() {
     const [searchText, setSearchText] = useState('abc');
 
     return (
-        <section className="bg-[#afb2b4] mx-3 pb-10 px-3  sm:px-6 md:mx-6 lg:mx-16 rounded-2xl">
+        <section className="mx-3 pb-10 px-3  sm:mx-6 md:mx-12 lg:mx-32 rounded-2xl">
             <div className="pt-6 pb-3">
                 <h1 className="font-bold text-[24px] pb-3">Creation of Dall-F</h1>
                 <p>See what DALL-F can do while browsing examples image that this AI generated.</p>
             </div>
 
-            <div className="pb-3">
+            <div className="pb-10 pt-3">
                 <FormField/>
             </div>
 

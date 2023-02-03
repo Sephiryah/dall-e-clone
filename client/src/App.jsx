@@ -7,7 +7,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <header className="bg-[#3a405a] flex justify-between items-center pr-5 pl-3 py-3 sm:pr-10 sm:pl-6 shadow-[0_px_5px_black] border-b-[1px] border-[#111]">
+      <header className="bg-[#3a405a] flex justify-between items-center pr-5 pl-3 py-3 sm:pr-10 sm:pl-6 shadow-[0_px_5px_black]">
         <Link to="/">
           <img src={logo} alt="Dall-F logo" className="h-[45px]"/>
         </Link>
