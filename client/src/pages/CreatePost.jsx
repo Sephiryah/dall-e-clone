@@ -15,6 +15,10 @@ function CreatePost() {
     const [generatingImg, setGeneratingImg] = useState(false);
     const [loading, setLoading] = useState(false);
 
+    const generateImage = () => {
+
+    }
+
     const handleSubmit = () => {
 
     }
@@ -74,6 +78,15 @@ function CreatePost() {
                             </div>
                         )}
                     </div>
+                </div>
+
+                <div>
+                    <button
+                        type="button"
+                        onClick={generateImage}
+                    >
+                        {generatingImg ? 'Generating...' : 'Generate'}
+                    </button>
                 </div>
             </form>
         </section>
