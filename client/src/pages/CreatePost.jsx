@@ -54,6 +54,20 @@ function CreatePost() {
                         isSurpriseMe
                         handleSurpriseMe={handleSurpriseMe}
                     />
+
+                    <div>
+                        {form.photo ? (
+                            <img
+                                src={form.photo}
+                                alt={form.prompt}
+                            />
+                        ) : (
+                            <img
+                                src={preview}
+                                alt="preview"
+                            />
+                        )}
+                    </div>
                 </div>
             </form>
         </section>
